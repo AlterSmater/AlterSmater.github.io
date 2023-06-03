@@ -14,7 +14,6 @@
     --dark: #102746;
     --black: #000;
     --light: #ffffff;
-    --blue: #c70909;
     --blue-hover: #2222ff;
     --dark-blue: #1b7dff;
     --shadow-bg: #16231599;
@@ -118,22 +117,7 @@ section:not(#hero):not(#showcase) {
     text-underline-offset: 40%;
 }
 
-.display-none {
-    display: none;
-}
 
-.display-block {
-    display: block;
-}
-
-.overflow-hidden {
-    overflow: hidden;
-}
-
-.no-border {
-    border: none;
-    outline: none;
-}
 
 /* RESTABLECIMIENTOS Y UTILIDADES POR DEFECTO */
 
@@ -245,10 +229,12 @@ nav {
 }
 
 .hero--header {
+    text-align: center;
     width: 25ch;
     font-weight: 500;
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 100px;
+    line-height: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero--header {
@@ -348,19 +334,12 @@ main {
     flex-direction: column;
 }
 
-#benefits {
-    width: 90%;
-    background-color: var(--light);
-    color: var(--dark);
-    align-self: center;
-    z-index: 2;
-}
-
 .benefits--header {
-    padding-block-end: 100px;
+    padding-block-end: 200px;
     font-weight: 500;
     font-size: 35px;
-    line-height: 42px;
+    line-height: 100px;
+    
 }
 
 .benefit--cards {
@@ -370,16 +349,19 @@ main {
 }
 
 .benefit--cards,
+
 .benefit--card_item {
     width: 100%;
     display: flex;
     align-items: flex-start;
+    
 }
 
 .benefit--card_item {
     min-height: 288px;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 
 .benefit--card_title {
@@ -388,10 +370,14 @@ main {
     line-height: 24px;
 }
 
-.benefits--card_text,
+.benefits--card_text {
+    color: black;
+
+}
 .benefits--card_link {
     font-size: 16px;
     line-height: 24px;
+    color: red;
 }
 
 .benefits--card_link {
@@ -403,6 +389,7 @@ main {
 .photoGrid--link:hover img {
     position: relative;
     animation: slide_inline 1s linear 300ms infinite;
+    
 }
 
 .benefits--card_link a {
@@ -744,8 +731,12 @@ main {
     }
 
     #benefits {
-        width: 80%;
-    }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        }
 }
 
 @media only screen and (max-width: 1366px) {
